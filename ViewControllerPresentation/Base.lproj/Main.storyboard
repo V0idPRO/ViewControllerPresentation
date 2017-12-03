@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViewControllerPresentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEr-1s-lDV">
+                                <rect key="frame" x="20" y="50" width="335" height="30"/>
+                                <state key="normal" title="Present Modally"/>
+                                <connections>
+                                    <action selector="presentModallyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ziS-Zu-3ez"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaC-kE-7MM">
+                                <rect key="frame" x="20" y="110" width="335" height="30"/>
+                                <state key="normal" title="Present In View"/>
+                                <connections>
+                                    <action selector="presentInViewAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kpe-bj-oOd"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pfw-by-bYG">
+                                <rect key="frame" x="20" y="170" width="335" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VEr-1s-lDV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7p6-Hj-f6g"/>
+                            <constraint firstItem="uaC-kE-7MM" firstAttribute="top" secondItem="VEr-1s-lDV" secondAttribute="bottom" constant="30" id="CXW-cX-e4d"/>
+                            <constraint firstItem="Pfw-by-bYG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FVK-Q4-qjy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VEr-1s-lDV" secondAttribute="trailing" constant="20" id="Qb0-Bq-lY7"/>
+                            <constraint firstItem="uaC-kE-7MM" firstAttribute="trailing" secondItem="VEr-1s-lDV" secondAttribute="trailing" id="SR4-hW-Q1T"/>
+                            <constraint firstItem="Pfw-by-bYG" firstAttribute="top" secondItem="uaC-kE-7MM" secondAttribute="bottom" constant="30" id="WYF-7T-mth"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pfw-by-bYG" secondAttribute="trailing" constant="20" id="b2Y-yt-Zrr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pfw-by-bYG" secondAttribute="bottom" constant="30" id="gcT-Sq-fhJ"/>
+                            <constraint firstItem="VEr-1s-lDV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="w8D-nU-ipn"/>
+                            <constraint firstItem="uaC-kE-7MM" firstAttribute="leading" secondItem="VEr-1s-lDV" secondAttribute="leading" id="xxz-HW-Ths"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="Pfw-by-bYG" id="DMH-Yr-wXt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
